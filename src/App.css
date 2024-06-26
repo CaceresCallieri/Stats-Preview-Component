@@ -1,0 +1,146 @@
+:root {
+  --violet: #ab5cdb;
+  --violet-low-opacity: rgba(100, 50, 120, 0.7);
+  --very-dark-violet: #1b1937;
+  --very-dark-blue: hsl(233, 47%, 7%);
+
+  font-family: Inter, system-ui, Avenir;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  color: white;
+  background-color: var(--very-dark-blue);
+}
+
+#root {
+  height: 100%;
+  width: 100vw;
+  margin: 0 auto;
+
+  display: grid;
+  place-items: center;
+}
+
+article.stats-preview-component {
+  max-width: 1110px;
+  background-color: var(--very-dark-violet);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  display: flex;
+}
+
+section.info {
+  padding: 4rem 4rem 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h2 {
+  font-size: 2.15rem;
+  margin-bottom: 2rem;
+}
+
+h2 span {
+  color: var(--violet);
+}
+
+p {
+  opacity: 0.75;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats-container h5 {
+  font-size: 1.5rem;
+}
+
+.stats p {
+  font-family: "Lexend Deca";
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  opacity: 0.6;
+}
+
+img {
+  height: 100%;
+}
+
+@media (width <= 1140px) {
+  article.stats-preview-component {
+    max-width: none;
+    width: 90%;
+  }
+
+  section.info {
+    padding: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (width <= 1000px) {
+  article.stats-preview-component {
+    width: 540px;
+    flex-direction: column-reverse;
+  }
+
+  section.info {
+    gap: 2rem;
+  }
+}
+
+@media (width <= 600px) {
+  article.stats-preview-component {
+    width: 90%;
+    text-align: center;
+  }
+
+  .image-container {
+    height: 250px;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (width <= 400px) {
+  article.stats-preview-component {
+    width: 95%;
+  }
+
+  h2 {
+    font-size: 1.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .stats p {
+    font-size: 0.8;
+  }
+}
